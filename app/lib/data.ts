@@ -17,7 +17,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     console.log("Fetching revenue data...");
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
@@ -53,7 +53,7 @@ export async function fetchLatestInvoices() {
 export async function fetchCardData() {
   try {
     console.log("Fetching card data...");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 500));
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
     // how to initialize multiple queries in parallel with JS.
