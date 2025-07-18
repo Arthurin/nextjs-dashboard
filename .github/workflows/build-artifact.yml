@@ -3,7 +3,7 @@ name: Build Next.js for Alwaysdata
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [deploiement]
 
 jobs:
   build:
